@@ -7,7 +7,7 @@ Student Name: Krishna Ajay
 Student Number: 33694173  
 
 ## Portfolio Live Server  
-https:// http://170.64.229.201/
+http://170.64.229.201/
 http://main.krishnaajay.online
 https://main.krishnaajay.online 
 
