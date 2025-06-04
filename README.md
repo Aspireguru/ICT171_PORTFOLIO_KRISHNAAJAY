@@ -4,7 +4,7 @@ Cloud project for ICT171 (Portfolio with server, documentation, and video explai
 # ICT171 Cloud Project Submission (Portfolio Website)
 
 Student Name: Krishna Ajay  
-Student Number: 33694173  
+Student Number: 33694173
 
 ## Portfolio Live Server  
 http://170.64.229.201/
