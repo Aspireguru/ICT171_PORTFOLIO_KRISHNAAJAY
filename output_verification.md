@@ -1,0 +1,5 @@
+# VERIYING SCRIP OUTPUT
+
+## DIGITAL CLOCK (JAVASCRIPT)
+![images](images/image3.png)
+       SCRIPT OUTPUT 1
