@@ -2,4 +2,60 @@
 
 ## DIGITAL CLOCK (JAVASCRIPT)
 ![images](images/image3.png)
-       SCRIPT OUTPUT 1
+SCRIPT OUTPUT 1
+
+## UPDATED WELCOME SECTION
+![images](images/image4.png)
+SCRIPT OUTPUT 2
+
+## GITHUB INTEGRATION IN NAVIGATION BAR
+![images](images/image5.png)
+SCRIPT OUTPUT 3
+If you click on it. It should navigate to my github profile.
+
+## GITHUB INTEGRATION IN NAVIGATION BAR
+![images](images/image6.png)
+SCRIPT OUTPUT 4
+
+## FORM VALIDATION FOR USER FORM (JAVA SCRIPT)
+![images](images/image7.png)
+SCRIPT OUTPUT 5
+
+![images](images/image8.png)
+SCRIPT OUTPUT 6
+
+![images](images/image9.png)
+SCRIPT OUTPUT 7
+
+![images](images/image10.png)
+SCRIPT OUTPUT 8
+
+## UPDATED SIDE BAR MENU
+![images](images/image11.png)
+SCRIPT OUTPUT 9
+
+## UPDATED EDUCATION AND SKILLS SECTION
+![images](images/image12.png)
+SCRIPT OUTPUT 10
+
+![images](images/image13.png)
+SCRIPT OUTPUT 11
+
+## UPDATED CERTIFICATION AND EXPERIENCE SECTION
+![images](images/image14.png)
+SCRIPT OUTPUT 12
+
+![images](images/image15.png)
+SCRIPT OUTPUT 13
+
+## UPDATED MY PROJECTS SECTIONS
+![images](images/image16.png)
+SCRIPT OUTPUT 14
+
+## UPDATED CONTACT ME SECTIONS
+![images](images/image17.png)
+SCRIPT OUTPUT 15
+
+## UPDATED END PAGE MENU 
+![images](images/image18.png)
+SCRIPT OUTPUT 16
