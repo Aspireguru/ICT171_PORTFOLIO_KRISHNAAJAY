@@ -25,7 +25,7 @@ https://www.dropbox.com/scl/fi/k28uh03361vqn4hmegp0x/33694173Assesment2VideoExpl
 | May 16      | GitHub profile integration and download link were added                                                      |
 | May 17      | Edited project file with custom content was uploaded to the server via SCP                                   |
 | May 18      | Server block was configured/ file permissions were implemented. Github account created, added README.md      |                        
-| May 20      | SSL certificate was installed using Let’s Encrypt Certbot (HTTPS)                                            |
+| May 20      | SSL certificate was installed using Lets Encrypt Certbot (HTTPS)                                            |
 | May 21      | Edited the project section using and adjusted the project image, checked the layout for responsiveness       |
 | May 22     | Added live digital clock using JavaScript and custom CSS                                                      |
 | May 25      | DNS + SSL test verification and ran SSL Labs check and provided the outputs in documentation                 |
