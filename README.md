@@ -1,18 +1,14 @@
-# ICT171_PORTFOLIO_KRISHNAAJAY
-Cloud project for ICT171 (Portfolio with server, documentation, and video explainer)
-
 # ICT171 Cloud Project Submission (Portfolio Website)
-
-Student Name: Krishna Ajay  
-Student Number: 33694173
-
-## Portfolio Live Server  
+## Portfolio Live Server:  
 Global IP: 170.64.229.201
 http://main.krishnaajay.online
 https://main.krishnaajay.online 
 
 ## Video Explainer  
 https://www.dropbox.com/scl/fi/k28uh03361vqn4hmegp0x/33694173Assesment2VideoExplainer.mp4?rlkey=4o9ul11zynq3ci79mdxa4baz3&st=j6h68025&dl=0
+
+Student Name: Krishna Ajay  
+Student Number: 33694173
 
 ## Development Timeline
 ------------------------------------------------------------------------------------------------------------------------------
@@ -27,7 +23,7 @@ https://www.dropbox.com/scl/fi/k28uh03361vqn4hmegp0x/33694173Assesment2VideoExpl
 | May 18      | Server block was configured/ file permissions were implemented. Github account created, added README.md      |                        
 | May 20      | SSL certificate was installed using Let’s Encrypt Certbot (HTTPS)                                            |
 | May 21      | Edited the project section using and adjusted the project image, checked the layout for responsiveness       |
-| May 22     | Added live digital clock using JavaScript and custom CSS                                                      |
+| May 22      |Added live digital clock using JavaScript and custom CSS                                                      |
 | May 25      | DNS + SSL test verification and ran SSL Labs check and provided the outputs in documentation                 |
 | May 27      | Final layout polished, ensured image paths and JS scripts are linked correctly                               |
 | May 29      | Reviewed error logs, made troubleshooting tips, tested navigation anchor links and menu smooth scroll        |
@@ -41,4 +37,4 @@ https://www.dropbox.com/scl/fi/k28uh03361vqn4hmegp0x/33694173Assesment2VideoExpl
 ------------------------------------------------------------------------------------------------------------------------------
 
 ## Documentation  
-Please check "Documentation.pdf" in this repository for full details on server setup, rebuild instructions, and project explanation.
+Please check "Documentation.md" in this repository for full details on server setup, rebuild instructions, and project explanation.
