@@ -136,3 +136,81 @@ For easy access you can type </body> using ctrl+f function
   font-family: 'Poppins', sans-serif;
   z-index: 9999;
 }
+
+
+## FORM VALIDATION FOR USER FORM (JAVA SCRIPT)
+The user form in the template did not have user validation once user enters details and submits it does not get acknowledge by the site it just refreshes the page. It also uses to accept user information even if any part of the form is blank. The java script I created below will validate required fields such as (name, message, email). It also ensures email address follows correct format using RegEx.  Overall, it will improve the user experience in my site and prevent empty and invalid submissions.
+
+<script>
+  // LISTEN FOR THE FORM'S SUBMIT EVENT
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent the page from refreshing on form submission
+    // IN THIS PART THE VALUE INPUTTED BY USER IS CONVERTED TO UPPERCASE
+    const yourNameRaw = document.getElementById('name').value.trim();
+    const emailValueFromForm = document.getElementById('email').value.trim(); 
+    const yourSubjectRaw = document.getElementById('subject').value.trim();
+    const yourMessageRaw = document.getElementById('message').value.trim();
+
+    const yourName = yourNameRaw.toUpperCase();
+    const yourEmail = emailValueFromForm.toUpperCase(); 
+    const yourSubject = yourSubjectRaw.toUpperCase();
+    const yourMessage = yourMessageRaw.toUpperCase();
+    const yourFormMessage = document.getElementById('formMessage'); // Where messages will be shown
+    // THIS FUNCTION VALIDATES THE EMAIL FORMAT THAT WAS ENTERED BY THE USER
+    const patternOfTheEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    // THIS FUNCTION MAKES SURE IF ANY FIELDS ARE EMPTY WHEN USER TRIES TO SEND THE MESSAGE.
+    if (!yourNameRaw || !emailValueFromForm || !yourSubjectRaw || !yourMessageRaw) {
+      yourFormMessage.textContent = 'Please fill in all details to proceed.';
+      yourFormMessage.style.color = 'red'; // The colour set to show error
+      return;
+    }
+    console.log("Email entered:", emailValueFromForm);
+    // Checks whether the email format is valid 
+    if (!patternOfTheEmail.test(emailValueFromForm)) { 
+      yourFormMessage.textContent = 'Invalid! Please enter a valid email address.';
+      yourFormMessage.style.color = 'red';
+      return;
+    }
+    // CHECK IF THE MESSAGE IS LONG ENOUGH SO THE USER CAN PROCEED, IF THE MESSAGE IS SHORT SHOW ERROR MESSAGE
+    if (yourMessage.length < 15) {
+      yourFormMessage.textContent = 'Message needs to be at least 15 characters long.';
+      yourFormMessage.style.color = 'red';
+      return;
+    }
+    // IF ALL CHECKS PASS SHOW MESSAGE TO THE USER SAYING SUCCESS
+    yourFormMessage.style.color = '#28a745'; // green
+    yourFormMessage.textContent = 'Thank you for contacting. Message has been successfully sent!';
+    // THIS FUNCTION RESETS THE FORM AFTER SUBMISSION
+    document.getElementById('contactForm').reset();
+    // CLEAR THE MESSAGE AFTER 3.5 SECONDS IF USER DOES NOT DO ANYTHING AFTER
+    setTimeout(() => {
+      yourFormMessage.textContent = '';
+    }, 3500);
+  });
+</script>
+
+### script is added this <script> block just before the closing </body> tag in your index.html file
+
+![images](images/image47.png)
+- Next open index.html Add id to each of input field
+- Also add a message display element this needs to be after the submit button
+
+![images](images/image48.png)
+
+## UPLOADING CV FILE SO USERS CAN DOWNLOAD IT FROM MY WEBSITE (HTML)
+- Adding a download file in the html file and place it just above </section>
+### Added the following line
+<a href="CV/krishna-cv.pdf" download class="btn btn-primary py-3 px-5">Download CV</a>
+Actual cv should be placed in CV/krishna-cv.pdf if no folder exists create a new folder called CV.
+
+## ADDED GITHUB BASIC INTEGRATION
+<li><ahref="https://github.com/Aspireguru/ICT171_PORTFOLIO_KRISHNAAJAY"target="_blank">GitHub</a></li>
+
+## ADDED FUNCTION TO GO BACK TO THE CORRECT SECTION WHEN CLICKING ON MENU IN NAVIGATION BAR
+
+![images](images/image49.png)
+
+## ADDED FUNCTION TO GO BACK TO THE CORRECT SECTION WHEN CLICKING ON MENU IN LINKS AT THE END OF THE PAGE
+
+![images](images/image50.png)
+
