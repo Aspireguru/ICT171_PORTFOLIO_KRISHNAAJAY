@@ -228,8 +228,9 @@ The actual CV should be placed in CV/krishna-cv.pdf. If no folder exists, create
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## ADDED GITHUB BASIC INTEGRATION
+```html
 <li><ahref="https://github.com/Aspireguru/ICT171_PORTFOLIO_KRISHNAAJAY"target="_blank">GitHub</a></li>
-
+```
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## ADDED FUNCTION TO GO BACK TO THE CORRECT SECTION WHEN CLICKING ON MENU IN NAVIGATION BAR
 
