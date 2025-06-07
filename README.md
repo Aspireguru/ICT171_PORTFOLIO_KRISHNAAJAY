@@ -43,9 +43,9 @@ https://www.dropbox.com/scl/fi/k28uh03361vqn4hmegp0x/33694173Assesment2VideoExpl
 | June 4      | Final review for error logs, made troubleshooting tips, tested navigation anchor links and menu smooth scroll|
 | June 4      | Documentation completed for portfolio, including all relevant references                                     |
 | June 5      | Video recording completed. Final update for README.md with full instructions                                 |
-| June 6      | Final commit before submission, checked the site fully working with DNS, SSL, and contact form               |
-| June 7      | Started converting several documents and splitting them into separate files                                  |
-| June 8      |                                                                                                              |  
-| June 9      |                                                                                                              |
-------------------------------------------------------------------------------------------------------------------------------
+| June 6      | Checked the site fully working with DNS, SSL, and contact form                                               |
+| June 7      | Started converting server documentation PDF and splitting it into separate files                             |
+| June 8      | Added server documentation, my contribution, output verification, and troubleshooting tips. md files         |  
+| June 9      | Final commit before submission                                                                               |
+
 
