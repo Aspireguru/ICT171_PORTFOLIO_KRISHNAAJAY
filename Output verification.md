@@ -1,14 +1,14 @@
-# VERIFYING SCRIP OUTPUT
+# 🧪🖥️✅ VERIFYING SCRIPT OUTPUT VERIFYING SCRIPT OUTPUT
 
 ## DIGITAL CLOCK (JAVASCRIPT)
 ![images](images/image3.png)
 - SCRIPT OUTPUT 1
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## UPDATED WELCOME SECTION
+## 🎉👋✨ UPDATED WELCOME SECTION
 ![images](images/image4.png)
 - SCRIPT OUTPUT 2
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## GITHUB INTEGRATION IN NAVIGATION BAR
+## 🐙🔗💻 GITHUB INTEGRATION IN NAVIGATION BAR
 ![images](images/image5.png)
 - SCRIPT OUTPUT 3
 - If you click on it. It should navigate to my GitHub profile.
