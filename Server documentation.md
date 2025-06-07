@@ -11,9 +11,9 @@ This document provides a step-by-step guide to rebuilding my personal portfolio 
 ![images](images/image1.png)
 
 
-##:hammer_and_wrench: STEP-BY-STEP SERVER BUILDING INSTRUCTIONS
+## :hammer_and_wrench: STEP-BY-STEP SERVER BUILDING INSTRUCTIONS
 
-###:desktop_computer::droplet: STEP 1: SIGNING UP AND CREATING A DROPLET IN DIGITAL OCEAN
+### :desktop_computer::droplet: STEP 1: SIGNING UP AND CREATING A DROPLET IN DIGITAL OCEAN
 
 1. Sign up for Digital Ocean and click on the control panel, and click on create droplet
 2. Choose Ubuntu 22.04 (LTS) x64 as the droplet (operating system).
@@ -24,7 +24,7 @@ This document provides a step-by-step guide to rebuilding my personal portfolio 
 7. Click Create Droplet, public IP address of the new Droplet (170.64.229.201)
 
 
-###:closed_lock_with_key::computer: STEP 2: CONNECTING TO THE SERVER FOR EASY ACCESS
+### :closed_lock_with_key::computer: STEP 2: CONNECTING TO THE SERVER FOR EASY ACCESS
 
 Open CMD or any terminal on your local machine and connect to the Droplet using its IP address 170.64.229.201
 
