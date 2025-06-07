@@ -1,4 +1,4 @@
-# 🛠️🐞💡 TROUBLESHOOTING ISSUES WITH TIPS
+# 🛠️💡 TROUBLESHOOTING ISSUES WITH TIPS
 
 ## 🌐🛠️🔥 WEB SERVER ISSUES (NGINX)
 In case Nginix configuration fails: If sudo nginx -t shows an error, read the message carefully. It could be on a specific file or line.
