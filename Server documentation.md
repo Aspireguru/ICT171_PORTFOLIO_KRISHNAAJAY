@@ -1,65 +1,58 @@
-# **PORTFOLIO WEBSITE SERVER BUILD AND TROUBLESHOOTING GUIDE**
+# 🌐🛠️ **PORTFOLIO WEBSITE SERVER BUILD AND TROUBLESHOOTING GUIDE**
 
 
-## **PURPOSE OF DOCUMENT:**
+##:blue_book: **PURPOSE OF DOCUMENT:**
 
-This document provides a step-by-step guide to rebuild my personal portfolio website and troubleshoot common issues. The website is a one-page static portfolio using the free bootstrap 4 template. The page also has some custom student information, manual JavaScript and CSS scripts. The java scripts were used to show real time to the users as they are in my portfolio website. The server runs on ubuntu 22.04 LTS Droplet using Digital Ocean with Nginx and Let’s Encrypt SSL. This document will help any IT professional to recreate my site or restore my site in approximately 2 hrs.  It will include instruction on deploying my site, configuring domain and SSL Lastly best practices using backup tips to resolve any issues that might come up.
-
-
-- SECTION 1 (STEP BY STEP SERVER BUILDING INSTRUCTION)
-- SECTION 2 (TROUBLESHOOTING TIPS)
-- SECTIPN 3 (MY CONTRIBUTIONS TO THE SERVER)
-- SECTION 4 (VERIYING SCRIP OUTPUT)
-- SECTION 5 (REFERENCES)
+This document provides a step-by-step guide to rebuilding my personal portfolio website and troubleshooting common issues. The website is a one-page static portfolio using the free Bootstrap 4 template. The page also has some custom student information, manual JavaScript and CSS scripts. The JavaScripts were used to show real-time data to the users as they are in my portfolio website. The server runs on Ubuntu 22.04 LTS Droplet using Digital Ocean with Nginx and Let’s Encrypt SSL. This document will help any IT professional recreate or restore my site in approximately 2 hrs.  It will include instruction on deploying my site, configuring the domain and SSL, and best practices using backup tips to resolve any issues that might come up.
 
 
-## 📋 PERSONAL SITE CONFIGURATION TABLE
+##📋 PERSONAL SITE CONFIGURATION TABLE
 
 ![images](images/image1.png)
 
 
-## SECTION 1: STEP BY STEP SERVER BUILDING INSTRUCTION
+##:hammer_and_wrench: STEP-BY-STEP SERVER BUILDING INSTRUCTIONS
 
-### STEP 1 SIGNING UP AND CREATING DROPLET IN DIGITAL OCEAN
+###:desktop_computer::droplet: STEP 1: SIGNING UP AND CREATING A DROPLET IN DIGITAL OCEAN
 
-1. Sign up in Digital Ocean and click on control panel and click on create droplet
+1. Sign up for Digital Ocean and click on the control panel, and click on create droplet
 2. Choose Ubuntu 22.04 (LTS) x64 as the droplet (operating system).
-3. Select correct droplet Basic droplet with 1 GB RAM, 1 CPU, 25 GB SSD (enough for my site)
-4. Pick a datacentre region (Sydney)
-5. For authentication I used a root password for easy access.
+3. Select the correct droplet: Basic droplet with 1 GB RAM, 1 CPU, 25 GB SSD (enough for my site)
+4. Pick a data centre region (Sydney)
+5. For authentication, I used a root password for easy access.
 6. Give the droplet a name (ICT 171)
-7. Click Create Droplet public IP address of the new Droplet (170.64.229.201)
+7. Click Create Droplet, public IP address of the new Droplet (170.64.229.201)
 
 
-### STEP 2 CONNECTING TO THE SERVER VIA FOR EASY ACCESS
+###:closed_lock_with_key::computer: STEP 2: CONNECTING TO THE SERVER FOR EASY ACCESS
 
-Open cmd or any terminal on your local machine and connect to the Droplet using its IP adress 170.64.229.201
+Open CMD or any terminal on your local machine and connect to the Droplet using its IP address 170.64.229.201
 
 #### Linux command
 ssh root@170.64.229.201 (log in using SSH key or root password)
 
 (In case of an issue, recheck that the Droplet was created with the correct SSH key or password, and that the IP is correct.)
 
-### STEP 3 INSTALL REQUIRED PACKAGES AND UPDATE
-This ensures the system is up to date. The -y flag automatically accepts prompts for installing updates. This might take some time if packages to update (important for security and stability)
+###⚙️🔄 STEP 3: INSTALL REQUIRED PACKAGES AND UPDATE
+This ensures the system is up to date. The -y flag automatically accepts prompts for installing updates. This might take some time if packages need to be updated (important for security and stability)
 
 #### Linux command
 apt update && apt upgrade -y
 
-### STEP 4 INSTALL NGINX WEB SERVER
-Next step is to install Nginx web server that will server my portfolio website. Ubuntu already has repository includes Nginx. On the server, install Nginx using apt.
+###⚙️🌐 STEP 4: INSTALL NGINX WEB SERVER
+The next step is to install the Nginx web server that will serve my portfolio website. Ubuntu already has a repository that includes Nginx. On the server, install Nginx using apt.
 
 #### Linux command
 sudo apt update
 sudo apt install nginx -y
 After running the command, it will download Nginx and any required dependencies.
-Nginx is started automatically you can verify that Nginx is running by checking its status
+Nginx is started automatically. You can verify that Nginx is running by checking its status
 
 #### Linux command to check status
 systemctl status nginx
 Here it would show Active: active (running). You can also test that Nginx is serving the default page by visiting the droplet’s IP (170.64.229.201) in a browser. You should see Nginx’s default “Welcome to Nginx” page, indicating the server is working.
 
-### STEP 5 SETTING UP THE PROJECT DIRECTORY
+###📂🧱 STEP 5: SETTING UP THE PROJECT DIRECTORY
 Set up a directory to hold the portfolio website’s files. By default, the web content on Ubuntu is served from /var/www. We now create a dedicated directory for the new subdomain main.krishnaajay.online under /var/www.
 
 #### Linux command
@@ -68,19 +61,18 @@ Set up a directory to hold the portfolio website’s files. By default, the web 
 
 directory for our site. We use the -p flag to ensure parent directories exist (though /var/www already exists, this flag just avoids errors if it didn’t).
 
-### STEP 6 EDITING THE PORTFOLIO TEMPLETE ACCORDING TO MY PORTFOLIO
-please scrool to student cointribution to see it.
+###💻📝 STEP 6: EDITING THE PORTFOLIO TEMPLATE ACCORDING TO MY PORTFOLIO
+Please scroll to the student contribution to see it.
 
-### STEP 7 AFTER EDITING THE FREE TEMPLATES, WE CAN UPLOAD THE FILES INTO THE NGINIX SECURE SERVER USING SECURE COPY (SCP)/SFTP: IF THE WEBSITE FILES (HTML, CSS, JS, IMAGES, ETC.) ARE ON YOUR LOCAL MACHINE.
-
-1. open cmd with admin privilagies and upload the edited template to the directory we previously created.
+###🔐📤 STEP 7: UPLOAD FILES TO NGINX SECURE SERVER USING SCP/SFTP AFTER EDITING TEMPLATES LOCALLY
+1. Open CMD with admin privileges and upload the edited template to the directory we previously created.
 2. Command to use: scp -r "C:\Users\MK535\OneDrive\Desktop\UNI 2025\ICT 171\Assignment 2 Cloud Project & Video Explainer\ronaldo-master\*" root@170.64.229.201:/var/www/krishnaajay.online/main/
 This command will copy all files to the /var/www/ main.krishnaajay.online directory on the server.
 
-### STEP 8 CONFIGURE NGINX SERVER BLOCK FOR THE PORTFOLIO SUBDOMAIN
-Nginx uses server blocks to find what content to show for a given domain or subdomain. We will create a new server block configuration for main.krishnaajay.online . By doing so Nginx knows to use our project directory and respond to requests. Generally, Nginx on Ubuntu stores server block configurations in /etc/nginx/sites-available/. Ther should be default config file present. We will make a new config file.
+### 🛠️📄 STEP 8: CONFIGURE NGINX SERVER BLOCK FOR THE PORTFOLIO SUBDOMAIN
+Nginx uses server blocks to find what content to show for a given domain or subdomain. We will create a new server block configuration for main.krishnaajay.online. By doing so, Nginx knows to use our project directory and respond to requests. Generally, Nginx on Ubuntu stores server block configurations in /etc/nginx/sites-available/. There should be a default config file present. We will make a new config file.
 
-#### Linus command to create new config file
+#### Linus' command to create a  new config file
 sudo nano /etc/nginx/sites-available/main.krishnaajay.online
 Replace the default content with
 server {
@@ -95,33 +87,33 @@ try_files $uri $uri/ =404;
 }
 Save and exit the editor (in nano, press Ctrl+X, then Y and Enter to confirm).
 
-#### Explanation of each line:
+#### 📝 DETAILED BREAKDOWN OF EACH LINE:
 - listen 80; and listen [::]:80; // tells nginx server to listen to ipv4 and 1pv6 port 80 (HTTP)
-- Root /var/www/ main.krishnaajay.online;// specifies web root directory this is where nginx will look for files.
+- Root /var/www/ main.krishnaajay.online;// specifies web root directory, this is where nginx will look for files.
 - Index index.html index.htm;// sets the index files
-- Server name main.krishnaajay.online;// defines domani name that this server block will respond to. This needs to match the subdomain we use. www.main.krishnaajay.online is not needed as we are using a subdomain of an existing domain
-- location / { try_files $uri $uri/ =404;}// Since my website is operated as a static site directive is a common configuration. This tell Nginx to server file requested by user incase if not found try andd serve a directory and nothing matches again return a 404 Not Found. This prevents Nginx from passing requests to the next server block or serving a default file.
+- Server name main. krishnaajay.online;// defines the domain name that this server block will respond to. This needs to match the subdomain we use. www.main.krishnaajay.online is not needed, as we are using a subdomain of an existing domain
+- location / { try_files $uri $uri/ =404;}// Since my website is operated as a static site directive is a common configuration. This tells Nginx to serve the file requested by the user, in case it is not found, try to serve a directory, and if nothing matches, return a 404 Not Found. This prevents Nginx from passing requests to the next server block or serving a default file.
 
-### STEP 9 ENABLE THIS CONFIGURATION BY CREATING A SYMLINK TO IT IN THE SITES-ENABLED DIRECTORY
-This command enables server block. Nginx reads config from sites-enabled/ on startup using a symlink so the actual files in sites-available/ is easily managable.
+###🔗📁 STEP 9: ENABLE THIS CONFIGURATION BY CREATING A SYMLINK TO IT IN THE SITES-ENABLED DIRECTORY
+This command enables server block. Nginx reads config from sites-enabled/ on startup using a symlink, so the actual files in sites-available/are easily manageable.
 
 #### Linus command
 sudo ln -s /etc/nginx/sites-available/main.krishnaajay.online /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl restart nginx
 
-### STEP 10 NGINX CONFIGURATION FOR SYNTAX ERRORS
-The output should say “syntax is ok” and “test is successful” if Nginx parse all config files and report success or any errors.
+###🧪⚙️ STEP 10: CHECK NGINX CONFIGURATION FOR SYNTAX ERRORS
+The output should say “syntax is ok” and “test is successful” if Nginx parse all config files and reports success or any errors.
 
 #### Linux command
 sudo nginx -t
-The output should say “syntax is ok” and “test is successful” if Nginx parse all config files and report success or any errors.
+The output should say “syntax is ok” and “test is successful” if Nginx parse all config files and reports success or any errors.
 
-#### Trouble shooting if you receive errors:
-- server_names_hash_bucket_size- means domain name is long and default hash bucket size for server names is not enough. 
+####🔍🛠️ TROUBLESHOOTING IF YOU RECEIVE ERRORS:
+- server_names_hash_bucket_size- means the domain name is long, and the default hash bucket size for server names is not enough. 
 - This error suggests increasing server_names_hash_bucket_size.
 How to fix it
-open /etc/nginx/nginx.conf look for line # server_names_hash_bucket_size 64;. Remove the # to set the bucket size to 64 Save the file and run nginx -t again.
+Open/etc/nginx/nginx.conf, look for line # server_names_hash_bucket_size 64;. Remove the # to set the bucket size to 64. Save the file and run nginx -t again.
 
 ### STEP 11 APPLY THE CHANGES BY RESTARTING OR RELOADING NGINX:
 Apply the new config without dropping connections.
