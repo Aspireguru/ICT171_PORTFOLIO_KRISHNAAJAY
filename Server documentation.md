@@ -5,14 +5,14 @@
 
 This document provides a step-by-step guide to rebuilding my personal portfolio website and troubleshooting common issues. The website is a one-page static portfolio using the free Bootstrap 4 template. The page also has some custom student information, manual JavaScript and CSS scripts. The JavaScripts were used to show real-time data to the users as they are in my portfolio website. The server runs on Ubuntu 22.04 LTS Droplet using Digital Ocean with Nginx and Let’s Encrypt SSL. This document will help any IT professional recreate or restore my site in approximately 2 hrs.  It will include instruction on deploying my site, configuring the domain and SSL, and best practices using backup tips to resolve any issues that might come up.
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## 📋 PERSONAL SITE CONFIGURATION TABLE
 
 ![images](images/image1.png)
 
 
 ## :hammer_and_wrench: STEP-BY-STEP SERVER BUILDING INSTRUCTIONS
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### :desktop_computer::droplet: STEP 1: SIGNING UP AND CREATING A DROPLET IN DIGITAL OCEAN
 
 1. Sign up for Digital Ocean and click on the control panel, and click on create droplet
@@ -23,7 +23,7 @@ This document provides a step-by-step guide to rebuilding my personal portfolio 
 6. Give the droplet a name (ICT 171)
 7. Click Create Droplet, public IP address of the new Droplet (170.64.229.201)
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### :closed_lock_with_key::computer: STEP 2: CONNECTING TO THE SERVER FOR EASY ACCESS
 
 Open CMD or any terminal on your local machine and connect to the Droplet using its IP address 170.64.229.201
