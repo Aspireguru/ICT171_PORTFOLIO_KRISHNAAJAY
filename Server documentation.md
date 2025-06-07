@@ -13,7 +13,7 @@ This document provides a step-by-step guide to rebuilding my personal portfolio 
 
 ## :hammer_and_wrench: STEP-BY-STEP SERVER BUILDING INSTRUCTIONS
 
-### :desktop_computer::droplet: STEP 1: SIGNING UP AND CREATING A DROPLET IN DIGITAL OCEAN
+### :desktop_computer::droplet: **STEP 1: SIGNING UP AND CREATING A DROPLET IN DIGITAL OCEAN**
 
 1. Sign up for Digital Ocean and click on the control panel, and click on create droplet
 2. Choose Ubuntu 22.04 (LTS) x64 as the droplet (operating system).
