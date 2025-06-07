@@ -6,7 +6,7 @@
 This document provides a step-by-step guide to rebuilding my personal portfolio website and troubleshooting common issues. The website is a one-page static portfolio using the free Bootstrap 4 template. The page also has some custom student information, manual JavaScript and CSS scripts. The JavaScripts were used to show real-time data to the users as they are in my portfolio website. The server runs on Ubuntu 22.04 LTS Droplet using Digital Ocean with Nginx and Let’s Encrypt SSL. This document will help any IT professional recreate or restore my site in approximately 2 hrs.  It will include instruction on deploying my site, configuring the domain and SSL, and best practices using backup tips to resolve any issues that might come up.
 
 
-##📋 PERSONAL SITE CONFIGURATION TABLE
+## 📋 PERSONAL SITE CONFIGURATION TABLE
 
 ![images](images/image1.png)
 
@@ -33,11 +33,13 @@ ssh root@170.64.229.201 (log in using SSH key or root password)
 
 (In case of an issue, recheck that the Droplet was created with the correct SSH key or password, and that the IP is correct.)
 
+
 ### ⚙️🔄 STEP 3: INSTALL REQUIRED PACKAGES AND UPDATE
 This ensures the system is up to date. The -y flag automatically accepts prompts for installing updates. This might take some time if packages need to be updated (important for security and stability)
 
 #### Linux command
 apt update && apt upgrade -y
+
 
 ### ⚙️🌐 STEP 4: INSTALL NGINX WEB SERVER
 The next step is to install the Nginx web server that will serve my portfolio website. Ubuntu already has a repository that includes Nginx. On the server, install Nginx using apt.
@@ -52,6 +54,7 @@ Nginx is started automatically. You can verify that Nginx is running by checking
 systemctl status nginx
 Here it would show Active: active (running). You can also test that Nginx is serving the default page by visiting the droplet’s IP (170.64.229.201) in a browser. You should see Nginx’s default “Welcome to Nginx” page, indicating the server is working.
 
+
 ### 📂🧱 STEP 5: SETTING UP THE PROJECT DIRECTORY
 Set up a directory to hold the portfolio website’s files. By default, the web content on Ubuntu is served from /var/www. We now create a dedicated directory for the new subdomain main.krishnaajay.online under /var/www.
 
@@ -61,13 +64,16 @@ Set up a directory to hold the portfolio website’s files. By default, the web 
 
 directory for our site. We use the -p flag to ensure parent directories exist (though /var/www already exists, this flag just avoids errors if it didn’t).
 
+
 ### 💻📝 STEP 6: EDITING THE PORTFOLIO TEMPLATE ACCORDING TO MY PORTFOLIO
 Please scroll to the student contribution to see it.
+
 
 ### 🔐📤 STEP 7: UPLOAD FILES TO NGINX SECURE SERVER USING SCP/SFTP AFTER EDITING TEMPLATES LOCALLY
 1. Open CMD with admin privileges and upload the edited template to the directory we previously created.
 2. Command to use: scp -r "C:\Users\MK535\OneDrive\Desktop\UNI 2025\ICT 171\Assignment 2 Cloud Project & Video Explainer\ronaldo-master\*" root@170.64.229.201:/var/www/krishnaajay.online/main/
 This command will copy all files to the /var/www/ main.krishnaajay.online directory on the server.
+
 
 ### 🛠️📄 STEP 8: CONFIGURE NGINX SERVER BLOCK FOR THE PORTFOLIO SUBDOMAIN
 Nginx uses server blocks to find what content to show for a given domain or subdomain. We will create a new server block configuration for main.krishnaajay.online. By doing so, Nginx knows to use our project directory and respond to requests. Generally, Nginx on Ubuntu stores server block configurations in /etc/nginx/sites-available/. There should be a default config file present. We will make a new config file.
@@ -94,6 +100,7 @@ Save and exit the editor (in nano, press Ctrl+X, then Y and Enter to confirm).
 - Server name main. krishnaajay.online;// defines the domain name that this server block will respond to. This needs to match the subdomain we use. www.main.krishnaajay.online is not needed, as we are using a subdomain of an existing domain
 - location / { try_files $uri $uri/ =404;}// Since my website is operated as a static site directive is a common configuration. This tells Nginx to serve the file requested by the user, in case it is not found, try to serve a directory, and if nothing matches, return a 404 Not Found. This prevents Nginx from passing requests to the next server block or serving a default file.
 
+
 ### 🔗📁 STEP 9: ENABLE THIS CONFIGURATION BY CREATING A SYMLINK TO IT IN THE SITES-ENABLED DIRECTORY
 This command enables server block. Nginx reads config from sites-enabled/ on startup using a symlink, so the actual files in sites-available/are easily manageable.
 
@@ -101,6 +108,7 @@ This command enables server block. Nginx reads config from sites-enabled/ on sta
 sudo ln -s /etc/nginx/sites-available/main.krishnaajay.online /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl restart nginx
+
 
 ### 🧪⚙️ STEP 10: CHECK NGINX CONFIGURATION FOR SYNTAX ERRORS
 The output should say “syntax is ok” and “test is successful” if Nginx parse all config files and reports success or any errors.
@@ -114,6 +122,7 @@ The output should say “syntax is ok” and “test is successful” if Nginx p
 - This error suggests increasing server_names_hash_bucket_size.
 How to fix it
 Open/etc/nginx/nginx.conf, look for line # server_names_hash_bucket_size 64;. Remove the # to set the bucket size to 64. Save the file and run nginx -t again.
+
 
 ### ⚙️🔄 STEP 11: APPLY THE CHANGES BY RELOADING OR RESTARTING NGINX
 Apply the new config without dropping connections.
@@ -133,12 +142,14 @@ sudo chmod -R 755 /var/www/krishnaajay.online/main
 
 This sets the owner to your user and group www-data and makes all files/directories readable by others. The 755 permission ensures that directories are traversable and files are readable by everyone (the owner can also write).
 
+
 ### 📁🛠️ STEP 13: FIX NESTED FOLDER ISSUES IN DEPLOYMENT
 Run these Linux commands to get the folder back into the right folder 
 
 #### Linux command
 sudo mv /var/www/krishnaajay.online/main/ronaldo-master/* /var/www/krishnaajay.online/main/
 sudo rm -r /var/www/krishnaajay.online/main/ronaldo-master
+
 
 ### 🌐🔁 STEP 14: CONFIGURE NAMECHEAP DNS TO POINT YOUR SUBDOMAIN TO YOUR DOMAIN
 This is important for Let's Encrypt and users to reach my site via the domain name, you need to create a DNS A record for the subdomain portfolio under your existing domain krishnaajay.online. My main domain is currently registered with Namecheap and used for Assessment 1.
@@ -163,10 +174,12 @@ TTL: Automatic
 
 We need to allow time for DNS propagation as DNS changes are not instant, typically take about 30 minutes to take effect (though it can be faster or up to a couple of hours). We can use tools such as https://www.whatsmydns.net/. Once the propagation is done, we can visit main.main.krishnaajay.online in a browser.
 
+
 ### 🌐✅ STEP 15: VERIFY THAT DNS IS POINTING CORRECTLY
 1. On the local machine, open CMD
 2. Run: nslookup main.krishnaajay.online
 3. Should see something like Address: 170.64.229.201
+
 
 ### 🔐⚙️ STEP 16: SECURE YOUR SITE WITH LET’S ENCRYPT SSL USING CERTBOT
 Next step is to get a free SSL/TLS certificate and the Certbot tool to automate the installation I will be using lets encrypt since its free and has auto renewal.
@@ -200,6 +213,7 @@ Since I'm using Ubuntu 22.04, the best way to install Certbot is via snap. Insta
 
 The site is now set to use HTTPS. All HTTP requests will be forwarded to HTTPS, and Nginx will serve the traffic using the new certificate.
 
+
 ### 🔐✅ STEP 17: VERIFY THAT SSL CERTIFICATE AUTO-RENEWAL IS CONFIGURED
 Certbot auto-enables renewal. It installs a systemd timer to renew the certificate when necessary. Certificates are generally valid for 90 days. But the auto-renewal will attempt to renew it after ~60 days.
 
@@ -211,6 +225,7 @@ If you see no errors, the renewal setup is successful and manual renewal is not 
 - DNS problem: NXDOMAIN looking up A for main.krishnaajay.online”
 - “Timeout”
 - These error messages could be shown because it couldn’t resolve or reach your host. Another could be firewall issues (unable to connect on port 80). More troubleshooting sections will be included at the end.
+
 
 ### 🧪🌐 STEP 18: VERIFY YOUR WEBSITE IS LIVE OVER HTTP AND HTTPS
 
