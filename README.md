@@ -1,4 +1,4 @@
-# :computer: ICT171 Cloud Project Submission (Portfolio Website)
+# :computer: ICT171 CLOUD PROJECT SUBMISSION (PORTFOLIO WEBSITE)
 Student Name: Krishna Ajay  
 Student Number: 33694173
 
