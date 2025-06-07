@@ -21,7 +21,7 @@ https://www.dropbox.com/scl/fi/k28uh03361vqn4hmegp0x/33694173Assesment2VideoExpl
 
 
 ## 🗓️ Development Timeline
-
+------------------------------------------------------------------------------------------------------------------------------
 | Date        | Task Completed                                                                                               |
 |-------------|--------------------------------------------------------------------------------------------------------------| 
 | May 10      | Set up DigitalOcean Droplet with Ubuntu 22.04 and Nginx                                                      |
@@ -44,8 +44,8 @@ https://www.dropbox.com/scl/fi/k28uh03361vqn4hmegp0x/33694173Assesment2VideoExpl
 | June 4      | Documentation completed for portfolio, including all relevant references                                     |
 | June 5      | Video recording completed. Final update for README.md with full instructions                                 |
 | June 6      | Final commit before submission, checked the site fully working with DNS, SSL, and contact form               |
-| June 7      | Started converting the severe documentation and splitting into separate files                                |
+| June 7      | Started converting several documents and splitting them into separate files                                  |
 | June 8      |                                                                                                              |  
 | June 9      |                                                                                                              |
-
+------------------------------------------------------------------------------------------------------------------------------
 
