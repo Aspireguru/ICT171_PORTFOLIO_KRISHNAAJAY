@@ -1,18 +1,18 @@
 # DEPLOY THE FREE TEMPLATE (RONALDO BOOTSTRAP 4 PORTFOLIO TEMPLATE)
-Editing the template to match my portfolio information, add manual JavaScript and CSS scripts and remove sections that is not needed. The java scripts were used to show real time to the users as they are in my portfolio website.
+Editing the template to match my portfolio information, adding manual JavaScript and CSS scripts and removing sections that are not needed. The java scripts were used to show real time to the users as they are in my portfolio website.
 
 - Download the Bootstrap 4 portfolio template from https://themewagon.com/themes/free-bootstrap-4-html5-one-page-personal-portfolio-website-template-ronaldo/
-- Exact the zip file using 7zip
+- Extract the zip file using 7zip
 - Open the index.html
 
-## EDIT THE CUSTOM TEMPLET TO MATCH MY CONTENT
+## EDIT THE CUSTOM TEMPLATE TO MATCH MY CONTENT
 We can edit this section by typing <span class= “subheading”>
-First edit to add my name and small animation with rotation
+First edit to add my name and a  small animation with rotation
 ![images](images/image19.png)
 
 Next section
 ### We can edit this section by typing <p class= “about=text”>
-This section is an about me page where brief about me and strengths
+This section is an about me page where a brief about me and d strengths
 ![images](images/image20.png)
 
 ### We can edit this section by typing <uI Class=” about-info mt-4 px-md-0 px-2”>
@@ -45,7 +45,7 @@ We can edit this section by typing <div class="text pl-3">
 
 ![images](images/image31.png)
 
-## UPDATING THE SKILLS ECTION
+## UPDATING THE SKILLS SECTION
 ### We can edit this section by typing <div id="page-3" class= "page three">
 ![images](images/image32.png)
 
@@ -65,51 +65,51 @@ We can edit this section by typing <div class="text pl-3">
 
 ![images](images/image39.png)
 
-## REMOVE THE AWARDS SECTION WITH CERTIFICATE SECTION
+## REMOVE THE AWARDS SECTION WITH THE CERTIFICATE SECTION
 ### We can edit this section by typing <div id="page-4" class="page four">
-Manual html scripting
+Manual HTML scripting
 
 ![images](images/image40.png)
 
 
 ## UPDATE EACH PROJECT ACCORDINGLY (MANUAL HTML SCRIPTING)
-### Removed all the default projects and replaced it with mine
+### Removed all the default projects and replaced them with mine
 
 ![images](images/image41.png)
-- Added all the certification according to certificates.
+- Added all the certifications according to the certificates.
 - Next, I removed the service section, blog section since this is my first portfolio
 
 ### We can edit this section by typing <section class="ftco-section ftco-hireme img"
 ![images](images/image42.png)
 
-## Next section similar but more details, such as address, phone number and website.
+## Next section similar but with more details, such as address, phone number and website.
 ### We can edit this section by typing <div class="row d-flex contact-info mb-5">
 ![images](images/image43.png)
 
 ## UPDATING HEADER AT THE END
 ### We can edit this section by typing <ul class="list-unstyled">
 ![images](images/image44.png)
-- Replace services at end of the page with relevant skills
+- Replace services at the end of the page with relevant skills
 
 ### We can edit this section by typing <div class="block-23 mb-3">
 ![images](images/image45.png)
 
-### Replaced the licensing of the page and used my licensing but credited colorlib for using their template
+### Replaced the licensing of the page and used my licensing, but credited colorlib for using their template
 ![images](images/image46.png)
 
 ## FIXING INCONSISTENT FONTS IN EDUCATION SECTION
 ### Manual CSS script 
-Open ccs folder in the root folder then open style.css and scroll to the very bottom.
+Open the CCS folder in the root folder, then open style.css and scroll to the very bottom.
 h2 {
 font-weight: 700 !important;
 
-## LIVE TIME DISPLAY CLOCK (JAVA SCRIPT)
+## LIVE TIME DISPLAY CLOCK (JavaScript)
 ### Description 
-A custom live digital clock was displayed on the site. This clock uses java scripting, and the clock updates every second using the function setInterval() and formats time using its built-in date object.
+A custom live digital clock was displayed on the site. This clock uses JavaScript, and the clock updates every second using the function setInterval() and formats time using its built-in Date object.
 
 #### In index.html add
 - <div id="clock">00:00:00</div> 
-- Add it just below <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300"> you can can edit this section by typing that scrip as well.
+- Add it just below <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">. You can edit this section by typing that script as well.
 
 #### Then in the <script> section at the bottom of the page (above </body>), add:
 For easy access you can type </body> using ctrl+f function
@@ -124,7 +124,7 @@ For easy access you can type </body> using ctrl+f function
   ShowsTheCurrentTime(); // Run at start
 </script>
 
-#### We also need to updater the style.css to do that open ccs folder in the root folder then open style.css and scroll to the very bottom. Paste this code to position and style the clock
+#### We also need to update the style.css to do that. Open the ccs folder in the root folder, then open style.css and scroll to the very bottom. Paste this code to position and style the clock
 }
 #clock {
   position: fixed;
@@ -138,13 +138,15 @@ For easy access you can type </body> using ctrl+f function
 }
 
 
-## FORM VALIDATION FOR USER FORM (JAVA SCRIPT)
-The user form in the template did not have user validation once user enters details and submits it does not get acknowledge by the site it just refreshes the page. It also uses to accept user information even if any part of the form is blank. The java script I created below will validate required fields such as (name, message, email). It also ensures email address follows correct format using RegEx.  Overall, it will improve the user experience in my site and prevent empty and invalid submissions.
+## FORM VALIDATION FOR USER FORM (JavaScript)
+The user form in the template did not have user validation. Once the user enters details and submits, it is not acknowledged by the site; it just refreshes the page. It is also used to accept user information even if any part of the form is blank. The JavaScript I created below will validate required fields such as name, message, and email. It also ensures the email address follows the correct format using RegEx.  Overall, it will improve the user experience on my site and prevent empty and invalid submissions.
 
+```html
 <script>
   // LISTEN FOR THE FORM'S SUBMIT EVENT
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault(); // Prevent the page from refreshing on form submission
+
     // IN THIS PART THE VALUE INPUTTED BY USER IS CONVERTED TO UPPERCASE
     const yourNameRaw = document.getElementById('name').value.trim();
     const emailValueFromForm = document.getElementById('email').value.trim(); 
@@ -156,52 +158,60 @@ The user form in the template did not have user validation once user enters deta
     const yourSubject = yourSubjectRaw.toUpperCase();
     const yourMessage = yourMessageRaw.toUpperCase();
     const yourFormMessage = document.getElementById('formMessage'); // Where messages will be shown
+
     // THIS FUNCTION VALIDATES THE EMAIL FORMAT THAT WAS ENTERED BY THE USER
     const patternOfTheEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
     // THIS FUNCTION MAKES SURE IF ANY FIELDS ARE EMPTY WHEN USER TRIES TO SEND THE MESSAGE.
     if (!yourNameRaw || !emailValueFromForm || !yourSubjectRaw || !yourMessageRaw) {
       yourFormMessage.textContent = 'Please fill in all details to proceed.';
       yourFormMessage.style.color = 'red'; // The colour set to show error
       return;
     }
+
     console.log("Email entered:", emailValueFromForm);
+
     // Checks whether the email format is valid 
     if (!patternOfTheEmail.test(emailValueFromForm)) { 
       yourFormMessage.textContent = 'Invalid! Please enter a valid email address.';
       yourFormMessage.style.color = 'red';
       return;
     }
-    // CHECK IF THE MESSAGE IS LONG ENOUGH SO THE USER CAN PROCEED, IF THE MESSAGE IS SHORT SHOW ERROR MESSAGE
+
+    // CHECK IF THE MESSAGE IS LONG ENOUGH SO THE USER CAN PROCEED
     if (yourMessage.length < 15) {
       yourFormMessage.textContent = 'Message needs to be at least 15 characters long.';
       yourFormMessage.style.color = 'red';
       return;
     }
+
     // IF ALL CHECKS PASS SHOW MESSAGE TO THE USER SAYING SUCCESS
     yourFormMessage.style.color = '#28a745'; // green
     yourFormMessage.textContent = 'Thank you for contacting. Message has been successfully sent!';
+
     // THIS FUNCTION RESETS THE FORM AFTER SUBMISSION
     document.getElementById('contactForm').reset();
-    // CLEAR THE MESSAGE AFTER 3.5 SECONDS IF USER DOES NOT DO ANYTHING AFTER
+
+    // CLEAR THE MESSAGE AFTER 3.5 SECONDS
     setTimeout(() => {
       yourFormMessage.textContent = '';
     }, 3500);
   });
 </script>
-
+```
 ### script is added this <script> block just before the closing </body> tag in your index.html file
 
 ![images](images/image47.png)
-- Next open index.html Add id to each of input field
-- Also add a message display element this needs to be after the submit button
+- Next, open index.html. Add an ID to each of the input fields
+- Also, add a message display element This needs to be after the submit button
 
 ![images](images/image48.png)
 
 ## UPLOADING CV FILE SO USERS CAN DOWNLOAD IT FROM MY WEBSITE (HTML)
-- Adding a download file in the html file and place it just above </section>
+- Adding a download file in the HTML file and placing it just above </section>
 ### Added the following line
 <a href="CV/krishna-cv.pdf" download class="btn btn-primary py-3 px-5">Download CV</a>
-Actual cv should be placed in CV/krishna-cv.pdf if no folder exists create a new folder called CV.
+The actual CV should be placed in CV/krishna-cv.pdf. If no folder exists, create a new folder called CV.
 
 ## ADDED GITHUB BASIC INTEGRATION
 <li><ahref="https://github.com/Aspireguru/ICT171_PORTFOLIO_KRISHNAAJAY"target="_blank">GitHub</a></li>
