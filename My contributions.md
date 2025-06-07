@@ -1,10 +1,11 @@
 # DEPLOY THE FREE TEMPLATE (RONALDO BOOTSTRAP 4 PORTFOLIO TEMPLATE)
-Editing the template to match my portfolio information, adding manual JavaScript and CSS scripts and removing sections that are not needed. The java scripts were used to show real time to the users as they are in my portfolio website.
+Editing the template to match my portfolio information, adding manual JavaScript and CSS scripts and removing sections that are not needed. The JavaScripts were used to show real-time to the users as they are in my portfolio website.
 
 - Download the Bootstrap 4 portfolio template from https://themewagon.com/themes/free-bootstrap-4-html5-one-page-personal-portfolio-website-template-ronaldo/
-- Extract the zip file using 7zip
+- Extract the zip file using 7-Zip
 - Open the index.html
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## EDIT THE CUSTOM TEMPLATE TO MATCH MY CONTENT
 We can edit this section by typing <span class= “subheading”>
 First edit to add my name and a  small animation with rotation
@@ -23,6 +24,7 @@ This section is basic personal contact details
 We can edit this section by typing <nav id="navi">
 ![images](images/image22.png)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## UPDATING EDUCATION SECTION
 We can edit this section by typing <div class="text pl-3">
 ![images](images/image23.png)
@@ -33,6 +35,7 @@ We can edit this section by typing <div class="text pl-3">
 
 ![images](images/image26.png)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## UPDATING EXPERIENCES SECTION
 ### We can edit this section by typing <div id="page-2" class= "page two">
 ![images](images/image27.png)
@@ -45,6 +48,7 @@ We can edit this section by typing <div class="text pl-3">
 
 ![images](images/image31.png)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## UPDATING THE SKILLS SECTION
 ### We can edit this section by typing <div id="page-3" class= "page three">
 ![images](images/image32.png)
@@ -53,6 +57,7 @@ We can edit this section by typing <div class="text pl-3">
 
 ![images](images/image34.png)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## NOW UPDATE HORIZONTAK SKILLS
 ### We can edit this section by typing  <div class="col-md-6 animate-box">
 ![images](images/image35.png)
@@ -65,13 +70,14 @@ We can edit this section by typing <div class="text pl-3">
 
 ![images](images/image39.png)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## REMOVE THE AWARDS SECTION WITH THE CERTIFICATE SECTION
 ### We can edit this section by typing <div id="page-4" class="page four">
 Manual HTML scripting
 
 ![images](images/image40.png)
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## UPDATE EACH PROJECT ACCORDINGLY (MANUAL HTML SCRIPTING)
 ### Removed all the default projects and replaced them with mine
 
@@ -86,6 +92,7 @@ Manual HTML scripting
 ### We can edit this section by typing <div class="row d-flex contact-info mb-5">
 ![images](images/image43.png)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## UPDATING HEADER AT THE END
 ### We can edit this section by typing <ul class="list-unstyled">
 ![images](images/image44.png)
@@ -97,12 +104,14 @@ Manual HTML scripting
 ### Replaced the licensing of the page and used my licensing, but credited colorlib for using their template
 ![images](images/image46.png)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## FIXING INCONSISTENT FONTS IN EDUCATION SECTION
 ### Manual CSS script 
 Open the CCS folder in the root folder, then open style.css and scroll to the very bottom.
 h2 {
 font-weight: 700 !important;
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## LIVE TIME DISPLAY CLOCK (JavaScript)
 ### Description 
 A custom live digital clock was displayed on the site. This clock uses JavaScript, and the clock updates every second using the function setInterval() and formats time using its built-in Date object.
@@ -140,7 +149,7 @@ For easy access you can type </body> using ctrl+f function
   z-index: 9999;
 }
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## FORM VALIDATION FOR USER FORM (JavaScript)
 The user form in the template did not have user validation. Once the user enters details and submits, it is not acknowledged by the site; it just refreshes the page. It is also used to accept user information even if any part of the form is blank. The JavaScript I created below will validate required fields such as name, message, and email. It also ensures the email address follows the correct format using RegEx.  Overall, it will improve the user experience on my site and prevent empty and invalid submissions.
 
@@ -210,15 +219,18 @@ The user form in the template did not have user validation. Once the user enters
 
 ![images](images/image48.png)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## UPLOADING CV FILE SO USERS CAN DOWNLOAD IT FROM MY WEBSITE (HTML)
 - Adding a download file in the HTML file and placing it just above </section>
 ### Added the following line
 <a href="CV/krishna-cv.pdf" download class="btn btn-primary py-3 px-5">Download CV</a>
 The actual CV should be placed in CV/krishna-cv.pdf. If no folder exists, create a new folder called CV.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## ADDED GITHUB BASIC INTEGRATION
 <li><ahref="https://github.com/Aspireguru/ICT171_PORTFOLIO_KRISHNAAJAY"target="_blank">GitHub</a></li>
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## ADDED FUNCTION TO GO BACK TO THE CORRECT SECTION WHEN CLICKING ON MENU IN NAVIGATION BAR
 
 ![images](images/image49.png)
