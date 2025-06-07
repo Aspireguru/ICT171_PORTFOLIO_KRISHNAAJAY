@@ -32,15 +32,15 @@ Open CMD or any terminal on your local machine and connect to the Droplet using 
 ssh root@170.64.229.201 (log in using SSH key or root password)
 
 (In case of an issue, recheck that the Droplet was created with the correct SSH key or password, and that the IP is correct.)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### ⚙️🔄 STEP 3: INSTALL REQUIRED PACKAGES AND UPDATE
 This ensures the system is up to date. The -y flag automatically accepts prompts for installing updates. This might take some time if packages need to be updated (important for security and stability)
 
 #### Linux command
 apt update && apt upgrade -y
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### ⚙️🌐 STEP 4: INSTALL NGINX WEB SERVER
 The next step is to install the Nginx web server that will serve my portfolio website. Ubuntu already has a repository that includes Nginx. On the server, install Nginx using apt.
 
