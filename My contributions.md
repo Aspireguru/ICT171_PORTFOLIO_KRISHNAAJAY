@@ -114,15 +114,18 @@ A custom live digital clock was displayed on the site. This clock uses JavaScrip
 #### Then in the <script> section at the bottom of the page (above </body>), add:
 For easy access you can type </body> using ctrl+f function
 
+```html
 <script>
-   function ShowsTheCurrentTime() {
-      const TimeCurrent = new Date ();
-      const TimeFormatted = TimeCurrent.toLocaleTimeString();
+  function ShowsTheCurrentTime() {
+    const TimeCurrent = new Date();
+    const TimeFormatted = TimeCurrent.toLocaleTimeString();
     document.getElementById('clock').textContent = TimeFormatted;
   }
+
   setInterval(ShowsTheCurrentTime, 1000);
   ShowsTheCurrentTime(); // Run at start
 </script>
+```
 
 #### We also need to update the style.css to do that. Open the ccs folder in the root folder, then open style.css and scroll to the very bottom. Paste this code to position and style the clock
 }
