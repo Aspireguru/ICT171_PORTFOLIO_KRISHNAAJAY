@@ -1,5 +1,5 @@
-# DEPLOY THE FREE TEMPLATE (RONALDO BOOTSTRAP 4 PORTFOLIO TEMPLATE)
-Editing the template to match my portfolio information, adding manual JavaScript and CSS scripts and removing sections that are not needed. The JavaScripts were used to show real-time to the users as they are in my portfolio website.
+# 🚀📁🎨 DEPLOY THE FREE TEMPLATE (RONALDO BOOTSTRAP 4 PORTFOLIO TEMPLATE)
+Editing the template to match my portfolio information, adding manual JavaScript and CSS scripts and removing sections that are not needed. The JavaScripts were used to show real-time data to the users as they are in my portfolio website.
 
 - Download the Bootstrap 4 portfolio template from https://themewagon.com/themes/free-bootstrap-4-html5-one-page-personal-portfolio-website-template-ronaldo/
 - Extract the zip file using 7-Zip
