@@ -18,7 +18,7 @@ https://www.dropbox.com/scl/fi/k28uh03361vqn4hmegp0x/33694173Assesment2VideoExpl
 - :page_facing_up: [README.md](README.md) – Project overview and instructions
 - :page_facing_up: [Server documentation.md](Server%20documentation.md) – Server setup and configuration guide
 - :page_facing_up: [Troubleshooting guide.md](Troubleshooting%20guide.md) – Common issues and solutions
-- :page_facing_up: [References.md](References%20.md) – Common issues and solutions
+- :page_facing_up: [References.md](References.md) – Contains references for everything
 
 ## 🗓️ Development Timeline
 
