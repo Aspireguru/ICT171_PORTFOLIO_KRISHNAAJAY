@@ -1,7 +1,7 @@
 # 🌐🛠️ **PORTFOLIO WEBSITE SERVER BUILD AND TROUBLESHOOTING GUIDE**
 
 
-##:blue_book: **PURPOSE OF DOCUMENT:**
+## :blue_book: **PURPOSE OF DOCUMENT:**
 
 This document provides a step-by-step guide to rebuilding my personal portfolio website and troubleshooting common issues. The website is a one-page static portfolio using the free Bootstrap 4 template. The page also has some custom student information, manual JavaScript and CSS scripts. The JavaScripts were used to show real-time data to the users as they are in my portfolio website. The server runs on Ubuntu 22.04 LTS Droplet using Digital Ocean with Nginx and Let’s Encrypt SSL. This document will help any IT professional recreate or restore my site in approximately 2 hrs.  It will include instruction on deploying my site, configuring the domain and SSL, and best practices using backup tips to resolve any issues that might come up.
 
