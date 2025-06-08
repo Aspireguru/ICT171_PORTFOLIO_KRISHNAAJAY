@@ -10,7 +10,7 @@ Student Number: 33694173
 ## 🎬 Video Explainer
 https://www.dropbox.com/scl/fi/k28uh03361vqn4hmegp0x/33694173Assesment2VideoExplainer.mp4?rlkey=4o9ul11zynq3ci79mdxa4baz3&st=j6h68025&dl=0
 
-## 📌 Development Index
+## Files index
 
 - :file_folder: [images/](images/) – Image assets for documentation
 - :page_facing_up: [My contributions.md](My%20contributions.md) – Personal contribution logs
